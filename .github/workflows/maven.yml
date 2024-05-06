@@ -43,4 +43,4 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2        
         with:
          files: 
-          target/surefire-reports/TEST-com.example.testcases.TestHelloWorld.xml
+          target/surefire-reports/TEST-saucedemo.com.testcases.LoginTest.xml
