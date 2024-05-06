@@ -44,17 +44,18 @@ After commit code successful, the workflow will be triggered and run
 ![2024-05-06_22h08_59](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/72906621-dca2-446b-b941-194b755de70f)
 
 Click link to view the action [https://github.com/camthinguyen/Automation-Test-Project/actions](https://github.com/camthinguyen/Automation-Test-Project/actions/runs/8971042402/job/24635979466)
-The test result will be puplished to show the test metrics
 
-![2024-05-06_22h10_34](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/7edaaa5e-3219-4172-9a2a-bcce8ffe5907)
-
-Or you can download report.zip to view fully html report
+You can download report.zip to view fully html report
 ![2024-05-06_22h14_34](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/7a2fff03-7c67-4758-9258-e41a623d7c47)
 
 Open Automation-Test-Project-Report.html
 ![2024-05-06_22h23_08](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/19ae98f6-6518-4e0f-ad2f-057b82d8f32c)
 
 ![2024-05-06_22h21_07](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/80faca35-711e-4d7d-bb72-fa270e8b0d2d)
+
+The test result will be puplished to show the test metrics
+
+![2024-05-06_22h10_34](https://github.com/camthinguyen/Automation-Test-Project/assets/17824398/7edaaa5e-3219-4172-9a2a-bcce8ffe5907)
 
 
 ## Appendix (for reference purpose)
