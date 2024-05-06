@@ -23,13 +23,13 @@ import saucedemo.com.pages.MenuComponent;
 @ExtendWith(CaptureScreenShotExtension.class)
 @ExtendWith(LoggingExtension.class)
 public class LoginTest extends BaseTest {
-	LoginPage loginPage = new LoginPage(driver);
-	ProductPage productPage = new ProductPage(driver);
-	MenuComponent menu = new MenuComponent(driver);
 
 	@ParameterizedTest
 	@CsvSource({ "standard_user,secret_sauce", "problem_user,secret_sauce", "performance_glitch_user,secret_sauce" })
 	public void test01LoginWithValidCredential(String userName, String password) {
+		LoginPage loginPage = new LoginPage(driver);
+		ProductPage productPage = new ProductPage(driver);
+		MenuComponent menu = new MenuComponent(driver);
 		loginPage.loginWithUserNamePassword(userName, password);
 		assertEquals(productPage.getTitle(), "Swag Labs");
 		menu.logout();
@@ -37,12 +37,14 @@ public class LoginTest extends BaseTest {
 
 	@Test
 	public void test02LoginWithBlank() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("", "");
 		assertEquals(loginPage.getLoginErrorMessage(), "Epic sadface: Username is required");
 	}
 
 	@Test
 	public void test03LoginWithNonExistingAccount() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("non_existing_acc", "secret_sauce");
 		assertEquals(loginPage.getLoginErrorMessage(),
 				"Epic sadface: Username and password do not match any user in this service");
@@ -50,24 +52,28 @@ public class LoginTest extends BaseTest {
 
 	@Test
 	public void test04LoginWithEmptyPassword() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("standard_user", "");
 		assertEquals(loginPage.getLoginErrorMessage(), "Epic sadface: Password is required");
 	}
 
 	@Test
 	public void test05LoginWithIncorrectPassword() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("standard_user", "");
 		assertEquals(loginPage.getLoginErrorMessage(), "Epic sadface: Password is required");
 	}
 
 	@Test
 	public void test06LoginWithLockedAccount() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("locked_out_user", "secret_sauce");
 		assertEquals(loginPage.getLoginErrorMessage(), "Epic sadface: Sorry, this user has been locked out.");
 	}
 
 	@Test
 	public void test07CloseErrorMessage() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginWithUserNamePassword("standard_user", "");
 		assertEquals(loginPage.getLoginErrorMessage(), "Epic sadface: Password is required");
 		loginPage.closeLoginErrorMessage();
@@ -76,6 +82,7 @@ public class LoginTest extends BaseTest {
 	
 	@AfterEach
 	public void clean() {
+		LoginPage loginPage = new LoginPage(driver);
 		loginPage.resetLoginTextField();
 	}
 
