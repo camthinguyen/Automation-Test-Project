@@ -16,7 +16,7 @@ on:
 
 jobs:
   buid-test:
-    runs-on: window-latest
+    runs-on: ubuntu-latest
 
     permissions:
       checks: write
