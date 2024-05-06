@@ -39,12 +39,16 @@ jobs:
       - name: Generate html report
         if: success() || failure()
         run: mvn site
+        
       - name: Publish Test Results
+        if: success() || failure()
         uses: EnricoMi/publish-unit-test-result-action@v2        
         with:
          files: 
           target/surefire-reports/TEST-saucedemo.com.testcases.LoginTest.xml
+          
       - uses: actions/upload-artifact@v4
+        if: success() || failure()
         with:
           name: report
           path: target/site
