@@ -44,3 +44,7 @@ jobs:
         with:
          files: 
           target/surefire-reports/TEST-saucedemo.com.testcases.LoginTest.xml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: report
+          path: target/site
