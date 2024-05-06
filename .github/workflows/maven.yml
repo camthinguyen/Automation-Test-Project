@@ -24,8 +24,12 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4      
-                          
+        uses: actions/checkout@v4
+      - name: Set up Firefox
+        uses: mozilla/fxtest@v4
+        with:
+            version: '124.0.2'
+                                  
       - name: Build project 
         run: mvn compile
         
