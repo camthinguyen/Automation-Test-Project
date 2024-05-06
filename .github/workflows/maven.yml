@@ -44,7 +44,7 @@ jobs:
         if: success() || failure()
         uses: EnricoMi/publish-unit-test-result-action@v2        
         with:
-         files: 
+         files: |
           target/surefire-reports/TEST-saucedemo.com.testcases.LoginTest.xml
           target/surefire-reports/TEST-saucedemo.com.testcases.AddProductsToCartTest.xml
           
