@@ -11,10 +11,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	public static WebDriver driver;
 	public static final String URL_login = "https://www.saucedemo.com/";
-
+	String version = "124.0.2";
+	
 	@BeforeAll
 	public void setUp() {
-		WebDriverManager.firefoxdriver().browserVersion("124.0.2").setup();
+		WebDriverManager.firefoxdriver().browserVersion(version).setup();
 		boolean headlessMode = Boolean.parseBoolean(System.getProperty("headless"));
 		FirefoxOptions options = new FirefoxOptions();
 		

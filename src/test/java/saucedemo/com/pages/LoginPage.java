@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import saucedemo.com.utils.WaitUtils;
+
 
 public class LoginPage {
 	
@@ -40,10 +42,12 @@ public class LoginPage {
 	}
 	
 	public String getLoginErrorMessage() {
+		WaitUtils.waitForElementDisplay(driver, this.loginErrorMsg);
 		return this.loginErrorMsg.getText();
 	}
 	
 	public void closeLoginErrorMessage() {
+		WaitUtils.waitForElementDisplay(driver, this.closeErrorBtn);
 		this.closeErrorBtn.click();
 	}
 	

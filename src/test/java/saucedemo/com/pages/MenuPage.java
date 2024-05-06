@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import saucedemo.com.utils.WaitUtils;
 
-public class MenuComponent {
+public class MenuPage {
 	@FindBy (id = "react-burger-menu-btn")
 	WebElement menuBgBtn;
 	
@@ -20,7 +20,7 @@ public class MenuComponent {
 	
 	WebDriver driver;
 
-	public MenuComponent(WebDriver driver) {
+	public MenuPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
