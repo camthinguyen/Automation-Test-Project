@@ -31,7 +31,7 @@ jobs:
           firefox-version:  '124.0.2'          
                                   
       - name: Build project 
-        run: mvn verify
+        run: mvn compile
         
       - name: Run test
         run: mvn test -Dbrowser=firefox -Dheadless=true
